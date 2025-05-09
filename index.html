@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveHub - Student Discounts</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#e94e77',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=hands%20exchanging%20credit%20cards%20and%20discount%20vouchers%20against%20a%20vibrant%20pink%20background%2C%20modern%20minimalist%20style%2C%20high%20contrast%20black%20and%20white%20hands%20with%20colorful%20cards%2C%20professional%20photography%2C%20clean%20composition%2C%20suitable%20for%20website%20hero%20section&width=1200&height=600&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center right;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-primary">SAVEHUB</h1>
+        </div>
+        
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-800 hover:text-primary font-medium">Home</a>
+            <a href="#" class="text-gray-800 hover:text-primary font-medium">Discounts</a>
+            <a href="#" class="text-gray-800 hover:text-primary font-medium">About</a>
+            <a href="#" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+        </nav>
+        
+        <div class="flex items-center space-x-4">
+            <a href="#" class="border border-primary text-primary px-5 py-2 rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-colors">Join Now</a>
+            <a href="#" class="bg-white border border-gray-200 text-gray-800 px-5 py-2 rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section w-full min-h-[500px] flex items-center">
+        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 py-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">SAVE MORE<br>STRESS LESS</h2>
+                <p class="mt-6 text-lg text-gray-700 max-w-lg">Save more as a student on everyday purchases, and discover new businesses in your city — all in one place</p>
+                <div class="mt-8">
+                    <a href="#" class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors inline-flex items-center">
+                        Get Started
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold text-center mb-12">Explore Discount Categories</h3>
+            
+            <div class="relative">
+                <div class="flex overflow-x-auto pb-8 gap-8 no-scrollbar">
+                    <div class="flex-shrink-0 w-48 flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=cozy%20restaurant%20interior%20with%20people%20enjoying%20food%20and%20drinks%2C%20warm%20lighting%2C%20casual%20dining%20atmosphere%2C%20modern%20cafe%20setting&width=300&height=300&seq=2&orientation=squarish" alt="Food & Drink" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-800">Food & Drink</h4>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-48 flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=clothing%20rack%20with%20colorful%20garments%2C%20fashion%20retail%20store%2C%20neat%20arrangement%20of%20clothes%2C%20modern%20boutique%20interior&width=300&height=300&seq=3&orientation=squarish" alt="Fashion" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-800">Fashion</h4>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-48 flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20electronics%20store%20interior%20with%20gadgets%20and%20devices%20on%20display%2C%20clean%20tech%20shop%20layout%2C%20bright%20lighting&width=300&height=300&seq=4&orientation=squarish" alt="Technology" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-800">Technology</h4>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-48 flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20exercise%20equipment%2C%20fitness%20center%20with%20people%20working%20out%2C%20clean%20and%20bright%20space&width=300&height=300&seq=5&orientation=squarish" alt="Health & Fitness" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-800">Health & Fitness</h4>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-48 flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=entertainment%20venue%20with%20movie%20theater%2C%20arcade%20games%2C%20and%20leisure%20activities%2C%20vibrant%20colors%2C%20fun%20atmosphere&width=300&height=300&seq=6&orientation=squarish" alt="Entertainment" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-800">Entertainment</h4>
+                    </div>
+                </div>
+                
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-md">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Deals Section -->
+    <section class="py-16 px-6 md:px-12 bg-gray-50">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold mb-12">Featured Student Deals</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=coffee%20shop%20interior%20with%20student%20discount%20sign%2C%20cozy%20cafe%20atmosphere%2C%20people%20studying%20with%20laptops&width=400&height=250&seq=7&orientation=landscape" alt="Cafe Discount" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm font-medium rounded-full mb-3">Food & Drink</span>
+                        <h4 class="text-xl font-bold mb-2">50% Off at Urban Brew</h4>
+                        <p class="text-gray-600 mb-4">Get half price on all coffee and pastries with your student ID every weekday before 11am.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Valid until June 30, 2025</span>
+                            <a href="#" class="text-primary font-medium flex items-center">
+                                Get Deal
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20clothing%20store%20with%20student%20discount%20promotion%2C%20fashion%20retail%20environment%2C%20sale%20signs&width=400&height=250&seq=8&orientation=landscape" alt="Fashion Discount" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm font-medium rounded-full mb-3">Fashion</span>
+                        <h4 class="text-xl font-bold mb-2">30% Off at StyleHub</h4>
+                        <p class="text-gray-600 mb-4">Exclusive student discount on all regular-priced items in store and online with verified student email.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Valid until May 15, 2025</span>
+                            <a href="#" class="text-primary font-medium flex items-center">
+                                Get Deal
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=electronics%20store%20with%20student%20discount%20promotion%2C%20tech%20gadgets%20on%20display%2C%20modern%20retail%20environment&width=400&height=250&seq=9&orientation=landscape" alt="Tech Discount" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm font-medium rounded-full mb-3">Technology</span>
+                        <h4 class="text-xl font-bold mb-2">15% Off at TechZone</h4>
+                        <p class="text-gray-600 mb-4">Save on laptops, tablets, and accessories with your student ID. In-store and online options available.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Valid until July 31, 2025</span>
+                            <a href="#" class="text-primary font-medium flex items-center">
+                                Get Deal
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold text-center mb-12">How SaveHub Works</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-user-add-line text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">1. Sign Up</h4>
+                    <p class="text-gray-600">Create your free account with your student email to verify your student status.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-search-line text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">2. Discover Deals</h4>
+                    <p class="text-gray-600">Browse through hundreds of exclusive student discounts in your area and online.</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-coupon-3-line text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">3. Save Money</h4>
+                    <p class="text-gray-600">Redeem offers in-store or online using our digital discount codes and vouchers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-6 md:px-12 bg-gray-50">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h3 class="text-2xl font-bold mb-4">Never Miss a Deal</h3>
+            <p class="text-gray-600 mb-8">Subscribe to our newsletter and get the latest student discounts delivered to your inbox weekly.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:border-primary">
+                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-4">SAVEHUB</h2>
+                    <p class="text-gray-400 max-w-xs">The ultimate platform for students to save money on everyday purchases.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-medium mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Partner With Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-medium mb-4">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-medium mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2024 SaveHub. All Rights Reserved</p>
+                
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
