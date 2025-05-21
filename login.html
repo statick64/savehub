@@ -68,11 +68,11 @@ if (loginForm) {
                 msg.textContent = 'Login successful! Redirecting...';
                 loginForm.parentNode.insertBefore(msg, loginForm.nextSibling);
             } else {
-                loginMessage.textContent = 'Login successful! Redirecting...';
-                loginMessage.className = 'mt-3 text-sm text-green-600';
+                loginMessage.textContent = 'Login successful! Redirecting to dashboard...';
+                loginMessage.className = 'text-green-600 mb-4';
             }
             setTimeout(function() {
-              window.location.href = 'index.html';
+              window.location.href = 'dashboard.html';
             }, 1500);
         } else {    
             if (!feedback) {
