@@ -58,9 +58,23 @@ if (loginForm) {
         const password = loginForm.querySelector('input[type=password]').value;
         const feedback = document.getElementById('loginFeedback');
         if (email === DUMMY_EMAIL && password === DUMMY_PASSWORD) {
-            // Simulate successful login
-            window.location.href = 'index.html';
-        } else {
+            // Successful login
+            localStorage.setItem('savehubUser', JSON.stringify({ email: email }));
+            const loginMessage = document.getElementById('loginFeedback');
+            if (!loginMessage) {
+                const msg = document.createElement('div');
+                msg.id = 'loginFeedback';
+                msg.className = 'mt-3 text-sm text-green-600';
+                msg.textContent = 'Login successful! Redirecting...';
+                loginForm.parentNode.insertBefore(msg, loginForm.nextSibling);
+            } else {
+                loginMessage.textContent = 'Login successful! Redirecting...';
+                loginMessage.className = 'mt-3 text-sm text-green-600';
+            }
+            setTimeout(function() {
+              window.location.href = 'index.html';
+            }, 1500);
+        } else {    
             if (!feedback) {
                 const msg = document.createElement('div');
                 msg.id = 'loginFeedback';
