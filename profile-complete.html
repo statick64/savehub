@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveHub - Profile Complete</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#e94e77',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-primary">SAVEHUB</h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-gray-800 hover:text-primary font-medium">Home</a>
+            <a href="Discount-page.html" class="text-gray-800 hover:text-primary font-medium">Discounts</a>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center justify-center min-h-[80vh] px-4">
+        <div class="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
+            <div class="flex justify-center mb-4">
+                <div class="bg-green-100 rounded-full p-3">
+                    <i class="ri-checkbox-circle-line text-4xl text-green-500"></i>
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Welcome, Kgato!</h2>
+            <p class="text-gray-700 mb-4">Your student profile is complete and verified</p>
+            <div class="bg-pink-50 text-pink-700 rounded-lg py-2 px-4 mb-6">
+                <i class="ri-coins-line mr-2"></i> +50 Bonus Coins <span class="text-gray-500">For completing your profile</span>
+            </div>
+            <div class="mb-8">
+                <h3 class="font-semibold mb-1">Get started with SaveHub</h3>
+                <div class="bg-gray-50 rounded-lg py-4 px-2 mb-3">
+                    <i class="ri-price-tag-3-line text-2xl text-primary"></i>
+                    <p class="font-medium mt-2">Exclusive Discounts</p>
+                    <p class="text-gray-500 text-sm">Access student-only deals from top brands</p>
+                </div>
+            </div>
+            <a href="index.html" class="block w-full bg-primary text-white py-3 rounded-button font-semibold hover:bg-opacity-90 transition-colors">Explore SaveHub</a>
+            <p class="text-gray-400 text-xs mt-4">You can update your profile anytime in Settings</p>
+        </div>
+    </main>
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12 mt-16">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2024 SaveHub. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
