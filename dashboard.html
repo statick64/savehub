@@ -26,6 +26,87 @@ input:focus {
 outline: none;
 }
 </style>
+<!-- Modal Styles -->
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+
+.term-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.term-item i {
+  color: #6b7280;
+  margin-right: 8px;
+}
+
+.claim-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4f9f;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.claim-button:hover {
+  background-color: #e93d8d;
+}
+</style>
 </head>
 <body>
 <!-- Header Navigation -->
@@ -37,7 +118,7 @@ outline: none;
 <nav class="hidden md:flex space-x-8">
 <a href="#" class="text-primary font-medium">Dashboard</a>
 <a href="#" class="text-gray-600 hover:text-primary">Deals</a>
-<a href="#" class="text-gray-600 hover:text-primary">Profile</a>
+<a href="https://readdy.ai/home/299933d8-32cf-4481-b7d8-eaf51e3ca863/144691b9-21d0-44af-947a-8b6dc7e40848" data-readdy="true" class="text-gray-600 hover:text-primary">Profile</a>
 <a href="#" class="text-gray-600 hover:text-primary">Settings</a>
 </nav>
 <div class="flex items-center space-x-4">
@@ -49,7 +130,7 @@ outline: none;
 <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
 <i class="ri-user-line text-gray-600"></i>
 </div>
-<span class="hidden md:inline text-sm font-medium">Emma Wilson</span>
+<span class="hidden md:inline text-sm font-medium">Kaone </span>
 </div>
 <button class="text-sm text-gray-600 hover:text-primary hidden md:block">
 <i class="ri-logout-box-r-line mr-1"></i>
@@ -64,7 +145,7 @@ Sign Out
 <section class="mb-8">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
 <div>
-<h1 class="text-2xl md:text-3xl font-bold text-gray-800">Welcome back, Emma!</h1>
+<h1 class="text-2xl md:text-3xl font-bold text-gray-800">Welcome back, Kaone!</h1>
 <p class="text-gray-600">Wednesday, May 21, 2025</p>
 </div>
 <div class="mt-4 md:mt-0">
@@ -80,7 +161,7 @@ Browse New Deals
 <div class="flex items-center justify-between">
 <div>
 <p class="text-gray-500 text-sm">Total Savings</p>
-<h3 class="text-2xl font-bold text-gray-800">BWP 3,234.50</h3>
+<h3 class="text-2xl font-bold text-gray-800">BWP 323.50</h3>
 </div>
 <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center">
 <i class="ri-money-dollar-circle-line text-primary ri-xl"></i>
@@ -156,7 +237,7 @@ Favorite
 </div>
 <div class="bg-white rounded shadow-sm dashboard-card border border-gray-100 overflow-hidden">
 <div class="relative">
-<img src="https://readdy.ai/api/search-image?query=modern%20clothing%20store%20interior%20with%20stylish%20displays%2C%20racks%20of%20trendy%20clothes%2C%20and%20soft%20lighting&width=400&height=200&seq=2&orientation=landscape" alt="StyleHub" class="w-full h-40 object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=modern%20clothing%20store%20interior%20with%20stylish%20displays%2C%20racks%20of%20trendy%20clothes%2C%20and%20soft%20lighting&width=400&height=200&seq=2&orientation=landscape" alt="Markham" class="w-full h-40 object-cover object-top">
 <div class="absolute top-3 left-3 bg-primary text-white text-sm font-bold px-2 py-1 rounded">
 30% OFF
 </div>
@@ -225,7 +306,7 @@ View All
 <p class="text-gray-600 text-sm my-2">Student discount on all movie tickets Monday through Thursday. Includes one free small popcorn.</p>
 <div class="flex justify-between items-center">
 <span class="text-gray-500 text-xs">Valid until August 15, 2025</span>
-<button class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
+<button id="saveDealBtn1" class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
 <i class="ri-bookmark-line mr-1"></i>
 Save Deal
 </button>
@@ -238,14 +319,14 @@ Save Deal
 <div class="flex justify-between items-start">
 <div>
 <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Health & Fitness</span>
-<h3 class="font-bold text-gray-800 mt-1">Jacks Gym</h3>
+<h3 class="font-bold text-gray-800 mt-1">Jack's Gym</h3>
 </div>
 <span class="font-bold text-primary">25% OFF</span>
 </div>
 <p class="text-gray-600 text-sm my-2">Student membership discount with no joining fee. Includes access to all classes and facilities.</p>
 <div class="flex justify-between items-center">
 <span class="text-gray-500 text-xs">Valid until September 30, 2025</span>
-<button class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
+<button id="saveDealBtn1" class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
 <i class="ri-bookmark-line mr-1"></i>
 Save Deal
 </button>
@@ -258,14 +339,14 @@ Save Deal
 <div class="flex justify-between items-start">
 <div>
 <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Education</span>
-<h3 class="font-bold text-gray-800 mt-1">BookNook</h3>
+<h3 class="font-bold text-gray-800 mt-1">Exclusive Books</h3>
 </div>
 <span class="font-bold text-primary">20% OFF</span>
 </div>
 <p class="text-gray-600 text-sm my-2">Discount on all books and stationery items. Additional 5% off on academic textbooks with student ID.</p>
 <div class="flex justify-between items-center">
 <span class="text-gray-500 text-xs">Valid until December 31, 2025</span>
-<button class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
+<button id="saveDealBtn1" class="bg-primary text-white px-3 py-1 text-sm rounded-button flex items-center !rounded-button whitespace-nowrap">
 <i class="ri-bookmark-line mr-1"></i>
 Save Deal
 </button>
@@ -285,7 +366,7 @@ Save Deal
 <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary"></div>
 <div>
 <div class="flex justify-between">
-<h3 class="font-medium text-gray-800">Mugg n Bean </h3>
+<h3 class="font-medium text-gray-800">Mugg n Bean</h3>
 <span class="text-green-600 font-medium">-BWP 110.75</span>
 </div>
 <p class="text-gray-500 text-sm">Purchased coffee and pastry</p>
@@ -484,34 +565,293 @@ View All Activity
 </div>
 </div>
 </footer>
+
+<!-- Deal Modal -->
+<div id="dealModal" class="modal">
+  <div class="modal-content relative">
+    <div class="modal-close" onclick="closeModal()">
+      <i class="ri-close-line"></i>
+    </div>
+    <div class="modal-header relative">
+      <img id="modal-image" src="https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Deal image">
+      <div id="modal-discount" class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-sm font-bold rounded">50% OFF</div>
+    </div>
+    <div class="p-5">
+      <div class="flex items-center justify-between mb-2">
+        <h2 id="modal-title" class="text-xl font-bold">Campus Café</h2>
+        <div class="flex items-center">
+          <div class="flex items-center mr-3">
+            <i class="ri-star-fill text-yellow-400 mr-1"></i>
+            <span id="modal-rating" class="text-sm font-medium">4.8 (120)</span>
+          </div>
+          <div class="flex items-center text-gray-500 text-sm">
+            <i class="ri-map-pin-line mr-1"></i>
+            <span id="modal-distance">0.3 miles</span>
+          </div>
+        </div>
+      </div>
+      <p id="modal-description" class="text-gray-700 mb-4">Buy one coffee, get one free. Valid for all students.</p>
+      
+      <div class="mb-4">
+        <h3 class="text-sm font-semibold text-gray-500 mb-2">Terms & Conditions</h3>
+        <div class="space-y-2">
+          <div class="term-item">
+            <i class="ri-checkbox-circle-line"></i>
+            <span id="term-1">Valid student ID required</span>
+          </div>
+          <div class="term-item">
+            <i class="ri-checkbox-circle-line"></i>
+            <span id="term-2">Not valid with other promotions</span>
+          </div>
+          <div class="term-item">
+            <i class="ri-checkbox-circle-line"></i>
+            <span id="term-3">Valid only at participating locations</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-5">
+        <h3 class="text-sm font-semibold text-gray-500 mb-2">Location</h3>
+        <p id="modal-location" class="text-gray-700">123 University Ave, Campus District</p>
+        <div id="modal-map" class="w-full h-24 bg-gray-200 rounded mt-2 overflow-hidden">
+          <img src="https://placehold.co/600x200/e2e8f0/e2e8f0" alt="Map" class="w-full h-full object-cover">
+        </div>
+      </div>
+      
+      <div class="text-sm text-gray-500 mb-4">
+        <span>Expires: </span>
+        <span id="modal-expiry">May 29, 2025</span>
+      </div>
+      
+      <button id="modal-claim-btn" class="claim-button">
+        Claim This Deal
+      </button>
+    </div>
+  </div>
+</div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Check authentication
-    const user = JSON.parse(localStorage.getItem('savehubUser'));
+// Mobile menu toggle
+const menuButton = document.querySelector('.mobile-menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+if (menuButton && mobileMenu) {
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+}
+});
+</script>
+<div id="toastNotification" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg transform translate-y-full opacity-0 transition-all duration-300 z-50">
+  Deal saved successfully!
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Save Deal Button Functionality
+  const saveDealButtons = document.querySelectorAll('[id^="saveDealBtn"]');
+  const toast = document.getElementById('toastNotification');
+  function showToast() {
+    toast.classList.remove('translate-y-full', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-full', 'opacity-0');
+    }, 2000);
+  }
+  function updateButtonState(button) {
+    const icon = button.querySelector('i');
+    icon.classList.remove('ri-bookmark-line');
+    icon.classList.add('ri-bookmark-fill');
+    button.innerHTML = `<i class="ri-bookmark-fill mr-1"></i>Saved`;
+    button.classList.add('opacity-75');
+    button.disabled = true;
+  }
+  saveDealButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation();
+      showToast();
+      updateButtonState(this);
+    });
+  });
+
+  // Modal Functionality
+  const modal = document.getElementById('dealModal');
+  const dealCards = document.querySelectorAll('.dashboard-card');
+  
+  // Deal data matching the actual deals shown on the dashboard
+  const deals = [
+    {
+      id: 'mugg-n-bean',
+      title: 'Mugg n Bean',
+      discount: '50% OFF',
+      description: 'Get half price on all coffee and pastries with your student ID every weekday before 11am.',
+      rating: '4.2 (85)',
+      distance: '0.5 miles',
+      expiry: 'June 30, 2025',
+      terms: [
+        'Valid student ID required',
+        'Not valid with other promotions',
+        'Valid only at participating locations'
+      ],
+      location: '789 Coffee Street, Student District',
+      image: 'https://readdy.ai/api/search-image?query=coffee%20shop%20interior%20with%20warm%20lighting%2C%20cozy%20ambiance%2C%20wooden%20tables%2C%20and%20coffee%20cups&width=400&height=200&seq=1&orientation=landscape'
+    },
+    {
+      id: 'markham',
+      title: 'Markham',
+      discount: '30% OFF',
+      description: 'Exclusive student discount on all regular-priced items in store and online with verified student email.',
+      rating: '4.6 (230)',
+      distance: '1.2 miles',
+      expiry: 'May 15, 2025',
+      terms: [
+        'Valid student ID required',
+        'Excludes limited editions',
+        'Online and in-store available'
+      ],
+      location: '456 Shopping Center, Downtown District',
+      image: 'https://readdy.ai/api/search-image?query=modern%20clothing%20store%20interior%20with%20stylish%20displays%2C%20racks%20of%20trendy%20clothes%2C%20and%20soft%20lighting&width=400&height=200&seq=2&orientation=landscape'
+    },
+    {
+      id: 'aptec',
+      title: 'Aptec',
+      discount: '15% OFF',
+      description: 'Discount on laptops, tablets, and accessories with your student ID in-store and online orders available.',
+      rating: '4.3 (110)',
+      distance: '0.8 miles',
+      expiry: 'July 31, 2025',
+      terms: [
+        'Valid student ID required',
+        'Excludes certain brands',
+        'Online orders eligible'
+      ],
+      location: '220 Tech Avenue, City Center',
+      image: 'https://readdy.ai/api/search-image?query=modern%20electronics%20store%20with%20displays%20of%20gadgets%2C%20computers%2C%20and%20tech%20accessories%20with%20clean%20lighting%20and%20sleek%20design&width=400&height=200&seq=3&orientation=landscape'
+    },
+    {
+      id: 'new-capitol',
+      title: 'New Capitol',
+      discount: '40% OFF',
+      description: 'Student discount on all movie tickets Monday through Thursday. Includes one free small popcorn.',
+      rating: '4.7 (195)',
+      distance: '0.6 miles',
+      expiry: 'August 15, 2025',
+      terms: [
+        'Valid student ID required',
+        'Monday-Thursday only',
+        'Cannot be combined with other offers'
+      ],
+      location: '75 Entertainment Blvd, Downtown',
+      image: 'https://readdy.ai/api/search-image?query=cinema%20interior%20with%20comfortable%20seats%2C%20movie%20screen%2C%20and%20dim%20lighting%20in%20a%20modern%20theater%20setting&width=120&height=120&seq=4&orientation=squarish'
+    },
+    {
+      id: 'jacks-gym',
+      title: 'Jack\'s Gym',
+      discount: '25% OFF',
+      description: 'Student membership discount with no joining fee. Includes access to all classes and facilities.',
+      rating: '4.5 (175)',
+      distance: '1.0 miles',
+      expiry: 'September 30, 2025',
+      terms: [
+        'Valid student ID required',
+        'Minimum 3-month commitment',
+        'All facilities included'
+      ],
+      location: '30 Fitness Road, Uptown',
+      image: 'https://readdy.ai/api/search-image?query=fitness%20gym%20interior%20with%20modern%20equipment%2C%20workout%20space%2C%20and%20bright%20lighting&width=120&height=120&seq=5&orientation=squarish'
+    },
+    {
+      id: 'exclusive-books',
+      title: 'Exclusive Books',
+      discount: '20% OFF',
+      description: 'Discount on all books and stationery items. Additional 5% off on academic textbooks with student ID.',
+      rating: '4.4 (162)',
+      distance: '0.4 miles',
+      expiry: 'December 31, 2025',
+      terms: [
+        'Valid student ID required',
+        'Excludes magazines and gift cards',
+        'Additional discount on textbooks'
+      ],
+      location: '15 Reading Lane, Campus District',
+      image: 'https://readdy.ai/api/search-image?query=bookstore%20interior%20with%20bookshelves%2C%20reading%20area%2C%20and%20cozy%20atmosphere&width=120&height=120&seq=6&orientation=squarish'
+    }
+  ];
+
+  function openModal(dealId) {
+    // Find the deal by ID
+    const deal = deals.find(d => d.id === dealId) || deals[0]; // Fallback to first deal if not found
     
-    if (!user || !user.email) {
-        // Redirect to login if not logged in
-        window.location.href = 'login.html';
+    // Update modal content
+    document.getElementById('modal-title').textContent = deal.title;
+    document.getElementById('modal-discount').textContent = deal.discount;
+    document.getElementById('modal-description').textContent = deal.description;
+    document.getElementById('modal-rating').textContent = deal.rating;
+    document.getElementById('modal-distance').textContent = deal.distance;
+    document.getElementById('modal-expiry').textContent = deal.expiry;
+    document.getElementById('modal-location').textContent = deal.location;
+    document.getElementById('modal-image').src = deal.image;
+    
+    // Update terms
+    document.getElementById('term-1').textContent = deal.terms[0];
+    document.getElementById('term-2').textContent = deal.terms[1];
+    document.getElementById('term-3').textContent = deal.terms[2];
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  }
+
+  // Assign deal IDs to each card based on their content
+  dealCards.forEach((card) => {
+    // Get the title element from the card
+    const titleEl = card.querySelector('h3');
+    let dealId = 'mugg-n-bean'; // Default fallback to Mugg n Bean (which user confirmed is correct)
+    
+    if (titleEl) {
+      const title = titleEl.textContent.trim();
+      
+      // Match title to deal ID
+      if (title === 'Mugg n Bean') {
+        dealId = 'mugg-n-bean';
+      } else if (title === 'Markham') {
+        dealId = 'markham';
+      } else if (title === 'Aptec') {
+        dealId = 'aptec';
+      } else if (title === 'New Capitol') {
+        dealId = 'new-capitol';
+      } else if (title === 'Jack\'s Gym') {
+        dealId = 'jacks-gym';
+      } else if (title === 'Exclusive Books') {
+        dealId = 'exclusive-books';
+      }
     }
     
-    // Add logout functionality to Sign Out button
-    const logoutBtn = document.querySelector('button i.ri-logout-box-r-line').closest('button');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('savehubUser');
-            window.location.href = 'index.html';
-        });
-    }
+    // Set a data attribute to store the deal ID
+    card.setAttribute('data-deal-id', dealId);
     
-    // Mobile menu toggle
-    const menuButton = document.querySelector('.mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
+    // Make card clickable
+    card.addEventListener('click', function() {
+      openModal(this.getAttribute('data-deal-id'));
+    });
+    card.style.cursor = 'pointer';
+  });
+
+  // Close modal when clicking the close button
+  window.closeModal = function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal();
     }
+  });
+
+  // Handle claim button click
+  document.getElementById('modal-claim-btn').addEventListener('click', function() {
+    alert('Deal claimed successfully! Check your email for details.');
+    closeModal();
+  });
 });
 </script>
 </body>
